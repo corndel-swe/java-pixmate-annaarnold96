@@ -1,21 +1,35 @@
 package com.corndel.pixmate.exercises;
 
 /**
- * @see <a href="https://tech-docs.corndel.com/java/nested-loops.html">Nested Loops in Java</a>
+ * @see <a href="https://tech-docs.corndel.com/java/loop-control-flow.html">Loop Control Flow in Java</a>
  */
-public class Exercise3 {
+public class Exercise2a {
 
   /**
-   * Given a grid of numbers (an array of arrays), count how many are larger than 10.
+   * Calculates the sum of numbers in an array that are either even or greater than 10,
+   * but skips numbers that are both.
    * <p>
-   * For example, if the input grid is [ [3, 12, 1], [19, 10, 11], [9, 5, 105] ], the method returns 4.
+   * For example, if the input array is [1, 4, 12, 15, 20, 5, 8, 10], the method returns 37.
    * </p>
-   * 
-   * @param grid an array of arrays of numbers
-   * @return the count of numbers larger than 10
+   *
+   * @param numbers an array of numbers to be processed
+   * @return the sum of numbers that meet the criteria
    */
-  public static int gridLimit(int[][] grid) {
+  public static int sumSelective(int[] numbers) {
     // TODO
-    return 0;
+    int sum = 0;
+
+    for (int i = 0; i < numbers.length; i++) {
+//      if (numbers[i]%2 == 0 && numbers[i] <= 10){
+//        sum += numbers[i];
+//      } else if (numbers[i]>10 && numbers[i]%2 != 0) {
+//        sum += numbers[i];
+//      }
+      if ((numbers[i]%2 == 0) ^ (numbers[i] > 10)) {
+        sum += numbers[i];
+      }
+    }
+
+    return sum;
   }
 }

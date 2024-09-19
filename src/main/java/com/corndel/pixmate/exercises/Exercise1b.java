@@ -12,6 +12,10 @@ public class Exercise1b {
    */
   public static int sumArray(int[] arr) {
     // TODO
-    return 0;
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum;
   }
 }
