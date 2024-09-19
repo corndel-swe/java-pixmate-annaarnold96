@@ -20,9 +20,12 @@ public class Exercise2a {
     int sum = 0;
 
     for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i]%2 == 0 && numbers[i] <= 10){
-        sum += numbers[i];
-      } else if (numbers[i]>10 && numbers[i]%2 != 0) {
+//      if (numbers[i]%2 == 0 && numbers[i] <= 10){
+//        sum += numbers[i];
+//      } else if (numbers[i]>10 && numbers[i]%2 != 0) {
+//        sum += numbers[i];
+//      }
+      if ((numbers[i]%2 == 0) ^ (numbers[i] > 10)) {
         sum += numbers[i];
       }
     }
