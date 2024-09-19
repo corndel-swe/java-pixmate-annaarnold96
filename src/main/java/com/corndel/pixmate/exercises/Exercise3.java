@@ -12,6 +12,16 @@ public class Exercise3 {
    */
   public static int gridLimit(int[][] grid) {
     // TODO
-    return 0;
+    int sum = 0;
+    for (int i = 0; i < grid.length; i++) {
+      for (int j = 0; j < grid[i].length; j++) {
+        if (grid[i][j] > 10){
+          sum += 1;
+        }
+
+      }
+
+    }
+    return sum;
   }
 }
